@@ -7,7 +7,7 @@ from typing import Dict, Any, List, Optional
 from dataclasses import dataclass
 from groq import AsyncGroq
 from datetime import datetime
-from client_claude import MCPClient
+from client import MCPClient
 
 print("Using Groq for inference - no local GPU required!")
 try:
@@ -1191,11 +1191,11 @@ JSON ARRAY:"""
 
 async def main():
     if len(sys.argv) < 3:
-        print("Usage: python best2.py ahsen_server.py <company_name_or_url> [max_pages] [model]")
+        print("Usage: python host.py mcp_server.py <company_name_or_url> [max_pages] [model]")
         print("Examples:")
-        print("  python best.py ahsen_server.py 'Google'")
-        print("  python best.py ahsen_server.py 'https://careers.google.com' 3")
-        print("  python best.py ahsen_server.py 'Microsoft' 2 'mixtral-8x7b-32768'")
+        print("  python host.py mcp_server.py 'Google'")
+        print("  python host.py mcp_server.py 'https://careers.google.com' 3")
+        print("  python host.py mcp_server.py 'Microsoft' 2 'mixtral-8x7b-32768'")
         print("\nAvailable models:")
         print("  - llama3-70b-8192 (default)")
         print("  - mixtral-8x7b-32768")

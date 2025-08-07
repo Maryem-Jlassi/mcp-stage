@@ -222,8 +222,8 @@ class MCPClient:
 async def main():
     """Main function for standalone testing"""
     if len(sys.argv) < 2:
-        print("Usage: python client_claude.py ahsen_server.py ")
-        print("Example: python mcp_client.py ahsen_server.py")
+        print("Usage: python client.py mcp_server.py ")
+        print("Example: python client.py mcp_server.py")
         sys.exit(1)
         
     server_script_path = sys.argv[1]

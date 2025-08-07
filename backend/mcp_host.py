@@ -6,7 +6,7 @@ from typing import Dict, Any, List, Optional
 from dataclasses import dataclass
 import ollama
 
-from client_claude import MCPClient
+from client import MCPClient
 
 @dataclass
 class ProcessingResult:

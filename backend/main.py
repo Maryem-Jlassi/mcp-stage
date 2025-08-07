@@ -12,7 +12,7 @@ import threading
 import time
 
 # Import your existing orchestrator
-from best2 import LLMOrchestrator, ProcessingResult
+from host import LLMOrchestrator, ProcessingResult
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -342,7 +342,7 @@ class ProgressAwareLLMOrchestrator(LLMOrchestrator):
         return numbers[0] if numbers else "0"
 
 # Server script path
-MCP_SERVER_SCRIPT = "ahsen_server.py"
+MCP_SERVER_SCRIPT = "mcp_server.py"
 
 @app.get("/")
 async def root():
