@@ -38,8 +38,7 @@ class LLMOrchestrator:
         self.mcp_client: Optional[MCPClient] = None
         self.available_tools = []
         self.groq_client = None
-        self.save_content = True  # Enable content saving for debugging
-        self.current_user = "Maryem-Jlassi"  # Set default user
+        self.save_content = False  # Enable content saving for debugging
         self.current_time = "2025-08-06 18:21:24"  # Updated timestamp
         self._initialize_model()
         
